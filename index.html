@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starship Prompt Palette Designer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>Starship Prompt Palette Designer</h1>
+        <p>Preview and tweak foreground/background colors for your starship prompt themes.</p>
+      </header>
+
+      <section class="controls" aria-label="palette controls">
+        <div class="row">
+          <label for="themeSelect">Theme</label>
+          <select id="themeSelect"></select>
+          <button id="addThemeBtn" type="button">Duplicate Theme</button>
+        </div>
+
+        <div id="colorControls" class="color-grid"></div>
+
+        <div class="actions">
+          <button id="resetBtn" type="button">Reset Active Theme</button>
+          <button id="downloadBtn" type="button">Download starship.toml</button>
+        </div>
+      </section>
+
+      <section class="preview" aria-label="prompt preview">
+        <h2>Prompt Preview</h2>
+        <div id="promptLine" class="prompt-line" role="img" aria-label="simulated prompt"></div>
+        <div class="prompt-char">❯</div>
+      </section>
+
+      <section class="output" aria-label="toml output">
+        <h2>Generated TOML</h2>
+        <textarea id="tomlOutput" rows="18" readonly></textarea>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
